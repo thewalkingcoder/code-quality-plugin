@@ -36,6 +36,21 @@ class AllInstall extends BaseCommand
 
         $process = new Process('make twc.fixdroits');
         $process->run();
+
+        $this->clearModels();
+    }
+
+    private function clearModels()
+    {
+        $dir = __DIR__.'/../../../../../';
+        $files = ['.php_cs.dist', 'phpcs.xml.dist'];
+
+        foreach ($files as $file) {
+            $absolute = $dir.$file;
+            if (file_exists($absolute)) {
+                unlink($absolute);
+            }
+        }
     }
 
     private function runCommand($commandName, $output, $arguments)

@@ -34,6 +34,7 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
     {
         return [
             'post-install-cmd' => 'postInstall',
+            'post-package-install' => 'postInstall',
         ];
     }
 
