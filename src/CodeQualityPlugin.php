@@ -35,7 +35,7 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
     {
         return [
             'post-install-cmd'     => 'postInstall',
-            'post-package-install' => 'postInstall',
+            'post-autoload-dump' => 'postInstall',
         ];
     }
 
@@ -52,9 +52,7 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
 
         $process = new Process('composer twc:install');
         $process->run();
-        if ($process->isSuccessful() === false) {
-            throw new ProcessFailedException($process);
-        }
+        
         $this->io->write($process->getOutput());
         $this->io->write('<info>twc/code-quality-plugin:</info> ...installation terminée');
     }
