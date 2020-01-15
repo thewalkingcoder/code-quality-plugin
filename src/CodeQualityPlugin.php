@@ -13,6 +13,7 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\Capable;
 use Composer\Plugin\PluginInterface;
 use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use Twc\Plugin\Composer\Command\TotoInstall;
 use Twc\Plugin\Composer\Provider\TwcCommandProvider;
@@ -33,7 +34,7 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
     public static function getSubscribedEvents()
     {
         return [
-            'post-install-cmd' => 'postInstall',
+            'post-install-cmd'     => 'postInstall',
             'post-package-install' => 'postInstall',
         ];
     }
@@ -51,6 +52,9 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
 
         $process = new Process('composer twc:install');
         $process->run();
+        if ($process->isSuccessful() === false) {
+            throw new ProcessFailedException($process);
+        }
         $this->io->write($process->getOutput());
         $this->io->write('<info>twc/code-quality-plugin:</info> ...installation terminée');
     }
