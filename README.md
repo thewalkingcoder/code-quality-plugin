@@ -2,6 +2,10 @@
 
 Plugin composer permettant la mise en place d'outils pour une  analyse qualité et respect des standards sur un projet symfony.
 
+# Pré-requis
+
+- git >=2.17
+- symfony (website-skeleton) >=4.4 ou symfony >=4.4 (skeleton) avec le pack symfony/test-pack
 
 # Installation
 
