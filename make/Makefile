@@ -1,0 +1,1 @@
+include vendor/twc/code-quality-plugin/make/quality.mk

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./quality/commit-rules.sh
