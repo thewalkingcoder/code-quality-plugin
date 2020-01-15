@@ -26,6 +26,28 @@ Après l'installation plusieurs élements auront été créés.
 
 Lors de l'installation un Makefile sera créé s'il n'est pas présent, ou une liste de recettes seront ajoutées à votre Makefile s'il existe.
 
+Par default les règles pour ***phpinsights*** sont les suivantes :
+
+| Module | % |
+|------|-----|
+| Code | 90 |
+| Complexity | 80 |
+| Architecture | 80 |
+| Style | 95 |
+
+Vous pouvez définir vos propres taux d'acceptations en surchargeant dans votre Makefile les variables suivantes :
+
+ ```
+
+TWC_INSIGHTS_CODE=80
+TWC_INSIGHTS_COMPLEXITY=70
+TWC_INSIGHTS_ARCHITECTURE=70
+TWC_INSIGHTS_STYLE=75
+
+include vendor/twc/code-quality-plugin/make/quality.mk
+
+```
+
 ### Liste des recettes du Makefile
 
 | Make | Def |

@@ -94,12 +94,21 @@ return [
             'linesCountAfterLastContent'                 => 0,
             'annotationsGroups'                          => [],
         ],
+        \ObjectCalisthenics\Sniffs\Files\ClassTraitAndInterfaceLengthSniff::class => [
+            'maxLength' => 250,
+        ],
+        \ObjectCalisthenics\Sniffs\Metrics\MethodPerClassLimitSniff::class => [
+            'maxCount' => 15,
+        ],
         \ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff::class => [
             'minLength' => 3,
             'allowedShortNames' => ['i', 'id', 'to', 'up', 'qb', 'io', 'e'],
         ],
         \ObjectCalisthenics\Sniffs\Files\FunctionLengthSniff::class => [
             'maxLength' => 30,
+        ],
+        \NunoMaduro\PhpInsights\Domain\Insights\CyclomaticComplexityIsHigh::class => [
+            'maxComplexity' => 10,
         ]
     ],
 
