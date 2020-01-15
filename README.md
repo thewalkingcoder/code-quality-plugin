@@ -1,6 +1,6 @@
 # CODE QUALITY PLUGIN
 
-Plugin composer permettant la mise en place d'outils pour une  analyse qualité et respect des standards sur projet symfony.
+Plugin composer permettant la mise en place d'outils pour une  analyse qualité et respect des standards sur un projet symfony.
 
 
 # Installation
