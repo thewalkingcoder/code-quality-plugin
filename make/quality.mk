@@ -18,7 +18,7 @@ twc.fixer: ./quality/.php_cs.dist
 	vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./quality/.php_cs.dist fix ./src
 
 twc.fix:
-	vendor/bin/phpcbf --standard=PSR12 ./src
+	vendor/bin/phpcbf --standard=PSR12 ./src || true
 
 twc.test: phpunit.xml.dist
 	bin/phpunit
