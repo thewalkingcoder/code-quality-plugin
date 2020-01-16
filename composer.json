@@ -1,5 +1,6 @@
 {
   "name": "twc/code-quality-plugin",
+  "description": "pre-configure fixer and analyse code quality",
   "type": "composer-plugin",
   "license": "MIT",
   "require": {
