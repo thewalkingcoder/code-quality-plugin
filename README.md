@@ -11,7 +11,7 @@ Plugin composer permettant la mise en place d'outils pour une  analyse qualité 
 
 ```
 
-composer install twc/code-quality-plugin --dev
+composer require twc/code-quality-plugin --dev
 
 ```
 
