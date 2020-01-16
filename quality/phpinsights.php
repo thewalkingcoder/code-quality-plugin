@@ -63,6 +63,7 @@ return [
         \NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
         \NunoMaduro\PhpInsights\Domain\Insights\Composer\ComposerMustBeValid::class,
         \NunoMaduro\PhpInsights\Domain\Insights\Composer\ComposerLockMustBeFresh::class,
+        \NunoMaduro\PhpInsights\Domain\Sniffs\ForbiddenSetterSniff::class,
         \PhpCsFixer\Fixer\ClassNotation\ProtectedToPrivateFixer::class,
         \PhpCsFixer\Fixer\StringNotation\ExplicitStringVariableFixer::class,
         \PhpCsFixer\Fixer\FunctionNotation\VoidReturnFixer::class,
@@ -102,7 +103,7 @@ return [
         ],
         \ObjectCalisthenics\Sniffs\NamingConventions\ElementNameMinimalLengthSniff::class => [
             'minLength' => 3,
-            'allowedShortNames' => ['i', 'id', 'to', 'up', 'qb', 'io', 'e'],
+            'allowedShortNames' => ['i', 'id', 'to', 'up', 'qb', 'io', 'e', 'em'],
         ],
         \ObjectCalisthenics\Sniffs\Files\FunctionLengthSniff::class => [
             'maxLength' => 30,
