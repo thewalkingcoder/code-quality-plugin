@@ -1,5 +1,7 @@
 # CODE QUALITY PLUGIN
 
+[![Build Status](https://travis-ci.com/thewalkingcoder/code-quality-plugin.svg?branch=master)](https://travis-ci.com/thewalkingcoder/code-quality-plugin)
+
 Plugin composer permettant la mise en place d'outils pour une  analyse qualité et respect des standards sur un projet symfony.
 
 # Pré-requis
