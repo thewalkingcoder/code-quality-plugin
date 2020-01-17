@@ -31,4 +31,4 @@ twc.fixdroits:
 	chmod 777 .git/hooks/commit-msg
 	chmod 777 quality/commit-rules.sh
 
-twc.quality: twc.fixer twc.fix twc.stan twc.insights.ci twc.test
+twc.quality: twc.fixer twc.fix twc.gitadd twc.stan twc.insights.ci twc.test
