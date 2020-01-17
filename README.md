@@ -24,6 +24,17 @@ Après l'installation plusieurs élements auront été créés.
 | Dossier | quality | Permet de configurer les standards et règles qualités sur votre projet | 
 | Fichier | Makefile | Ajoute des recettes  | 
 
+# Utilisation
+
+Une fois installé lors de vos commits les actions suivantes seront réalisées.
+
+- Fix du code avec php cs fixer
+- Fix du code avec php code sniffer
+- Analyse statique du code avec phpstan
+- Analyse statique du code avec phpinsights
+
+La moindre erreur arrête le process de commit pour que vous puissiez fixer le problème.
+
 # Makefile
 
 Lors de l'installation un Makefile sera créé s'il n'est pas présent, ou une liste de recettes seront ajoutées à votre Makefile s'il existe.
