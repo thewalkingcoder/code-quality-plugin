@@ -3,7 +3,7 @@ TWC_INSIGHTS_COMPLEXITY?=80
 TWC_INSIGHTS_ARCHITECTURE?=80
 TWC_INSIGHTS_STYLE?=95
 
-.PHONY: twc.stan twc.insights twc.insights-ci twc.fixer twc.fix twc.fixdroits twc.test
+.PHONY: twc.stan twc.insights twc.insights-ci twc.fixer twc.fix twc.gitadd twc.fixdroits twc.test
 
 twc.stan: ./quality/phpstan.neon
 	vendor/bin/phpstan analyse -c ./quality/phpstan.neon --level=0 ./src
@@ -20,6 +20,9 @@ twc.fixer: ./quality/.php_cs.dist
 twc.fix:
 	vendor/bin/phpcbf --standard=PSR12 ./src || true
 
+twc.gitadd:
+	git add .
+	
 twc.test: phpunit.xml.dist
 	bin/phpunit
 
