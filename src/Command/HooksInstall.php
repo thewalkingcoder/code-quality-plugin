@@ -93,7 +93,7 @@ class HooksInstall extends BaseCommand
 
         $commitMsgSource = __DIR__ . "/../../hooks/$hook";
         $fileSystem->copy($commitMsgSource, $this->getAbsoluteHook($hook));
-        $fileSystem->chmod($this->getAbsoluteHook($hook), '0777');
+        $fileSystem->chmod($this->getAbsoluteHook($hook), 0777);
         $this->output->writeln("<info>twc/code-quality-plugin:</info> Hook $hook créé");
     }
 

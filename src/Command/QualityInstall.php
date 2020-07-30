@@ -54,7 +54,7 @@ class QualityInstall extends BaseCommand
         }
 
         $composerSystem->copy(__DIR__ . '/../../quality', $this->dirQuality);
-        $fileSystem->chmod($this->dirQuality . '/commit-rules.sh', '777');
+        $fileSystem->chmod($this->dirQuality . '/commit-rules.sh', 0777);
         $output->writeln('<info>twc/code-quality-plugin:</info> Dossier de configuration créé');
     }
 }
