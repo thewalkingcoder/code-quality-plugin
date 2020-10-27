@@ -8,17 +8,9 @@ Plugin composer permettant la mise en place d'outils pour une  analyse qualité 
 
 - git >=2.17
 - symfony (website-skeleton) >=4.4 ou symfony >=4.4 (skeleton) avec le pack symfony/test-pack
-- composer 2.x
+- composer 1.x
 
 # Installation
-
-```
-
-composer require twc/code-quality-plugin --dev
-
-```
-
-If you use composer v1.x try
 
 ```
 
