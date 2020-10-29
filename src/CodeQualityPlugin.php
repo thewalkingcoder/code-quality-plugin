@@ -56,4 +56,16 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
         $this->io->write($process->getOutput());
         $this->io->write('<info>twc/code-quality-plugin:</info> ...installation terminée');
     }
+
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+        // TODO: Implement deactivate() method.
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+        // TODO: Implement uninstall() method.
+    }
+
+
 }
