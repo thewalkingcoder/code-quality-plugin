@@ -5,12 +5,13 @@
   "license": "MIT",
   "require": {
     "php": "^7.2",
-    "composer-plugin-api": "^1.1",
+    "composer-plugin-api": "^2.0",
+    "composer/composer": "^2.0",
     "symfony/framework-bundle": "^4.0|^5.0",
     "symfony/process": "^4.0|^5.0",
     "symfony/filesystem": "^4.0|^5.0",
     "symfony/finder": "^4.0|^5.0",
-    "nunomaduro/phpinsights": "^1.11",
+    "twc/phpinsights": "^1.15",
     "phpstan/phpstan": "^0.12.4"
   },
   "require-dev": {

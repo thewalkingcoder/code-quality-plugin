@@ -40,7 +40,7 @@ Une fois installé lors de vos commits les actions suivantes seront réalisées.
 - Fix du code avec php cs fixer
 - Fix du code avec php code sniffer
 - Analyse statique du code avec phpstan
-- Analyse statique du code avec phpinsights
+- Analyse statique du code avec phpinsights [fork du projet initial ne pouvant pas suivre le pre-requis php au delà de la v1.14]
 
 La moindre erreur arrête le process de commit pour que vous puissiez fixer le problème.
 
