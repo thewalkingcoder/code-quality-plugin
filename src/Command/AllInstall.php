@@ -38,6 +38,8 @@ class AllInstall extends BaseCommand
         $process->run();
 
         $this->clearModels();
+
+        return 0;
     }
 
     private function clearModels()

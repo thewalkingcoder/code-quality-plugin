@@ -44,7 +44,7 @@ class MakefileInstall extends BaseCommand
             $fileSystem->copy(__DIR__ . '/../../make/Makefile', $this->makefile);
             $output->writeln('<info>twc/code-quality-plugin:</info> Create Makefile');
 
-            return false;
+            return 0;
         }
 
         $content = file_get_contents($this->makefile);
@@ -53,10 +53,12 @@ class MakefileInstall extends BaseCommand
         if (in_array($model, $lines)) {
             $output->writeln('<info>twc/code-quality-plugin:</info> [skip] Makefile is up to date');
 
-            return false;
+            return 0;
         }
 
         file_put_contents($this->makefile, "\n\n$model", FILE_APPEND);
         $output->writeln('<info>twc/code-quality-plugin:</info> Makefile updated');
+
+        return 0;
     }
 }
