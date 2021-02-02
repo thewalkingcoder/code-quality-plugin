@@ -37,6 +37,7 @@ class CommitForce extends BaseCommand
 
         $this->restore(['pre-commit.tempo', 'commit-msg.tempo']);
         $output->write($process->getOutput());
+        return 0;
     }
 
     private function getHooksDir()

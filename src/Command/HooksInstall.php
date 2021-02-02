@@ -47,7 +47,7 @@ class HooksInstall extends BaseCommand
             }
             $this->output->writeln('<info>[skip] Git n\'est pas initialisé sur votre projet</info>');
 
-            return false;
+            return 0;
         }
 
         $hooks = $this->getHooks();
@@ -55,6 +55,8 @@ class HooksInstall extends BaseCommand
         foreach ($hooks as $hook) {
             $this->copy($hook);
         }
+
+        return 0;
     }
 
     private function getHooks()
