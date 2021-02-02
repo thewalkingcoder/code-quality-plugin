@@ -34,7 +34,7 @@ class AllInstall extends BaseCommand
             $this->runCommand($command, $output, $arguments);
         }
 
-        $process = new Process('make twc.fixdroits');
+        $process = new Process(['make twc.fixdroits']);
         $process->run();
 
         $this->clearModels();

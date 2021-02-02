@@ -28,7 +28,7 @@ class CommitForce extends BaseCommand
 
         $this->renameTempo(['pre-commit', 'commit-msg']);
 
-        $process = new Process('git commit -m "[commit-forced] ' . $message . '"');
+        $process = new Process(['git commit -m "[commit-forced] ' . $message . '"']);
         $process->run();
 
         if (!$process->isSuccessful()) {
