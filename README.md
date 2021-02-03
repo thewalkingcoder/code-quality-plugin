@@ -40,7 +40,6 @@ Une fois installé lors de vos commits les actions suivantes seront réalisées.
 - Fix du code avec php cs fixer
 - Fix du code avec php code sniffer
 - Analyse statique du code avec phpstan
-- Analyse statique du code avec phpinsights [fork du projet initial ne pouvant pas suivre le pre-requis php au delà de la v1.14]
 
 La moindre erreur arrête le process de commit pour que vous puissiez fixer le problème.
 
@@ -48,24 +47,8 @@ La moindre erreur arrête le process de commit pour que vous puissiez fixer le p
 
 Lors de l'installation un Makefile sera créé s'il n'est pas présent, ou une liste de recettes seront ajoutées à votre Makefile s'il existe.
 
-Par default les règles pour ***phpinsights*** sont les suivantes :
-
-| Module | % |
-|------|-----|
-| Code | 90 |
-| Complexity | 80 |
-| Architecture | 80 |
-| Style | 95 |
-
-Vous pouvez définir vos propres taux d'acceptations en surchargeant dans votre Makefile les variables suivantes :
-
- ```
-
-TWC_INSIGHTS_CODE=80
-TWC_INSIGHTS_COMPLEXITY=70
-TWC_INSIGHTS_ARCHITECTURE=70
-TWC_INSIGHTS_STYLE=75
-
+ ```bash
+ 
 include vendor/twc/code-quality-plugin/make/quality.mk
 
 ```
@@ -75,7 +58,6 @@ include vendor/twc/code-quality-plugin/make/quality.mk
 | Make | Def |
 |------|-----|
 | make twc.stan | Lance une analyse statique avec ***phpstan***  | 
-| make twc.insights | Lance une analyse statique avec ***phpinsights***  | 
 | make twc.fixer | Fix les standards avec ***php-cs-fixer***  | 
 | make twc.fix | Fix les standards avec ***php-code-sniffer***  | 
 | make twc.test | Lancer les tests avec ***phpunit***  | 
