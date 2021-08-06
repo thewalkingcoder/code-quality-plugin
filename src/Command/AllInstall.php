@@ -45,7 +45,7 @@ class AllInstall extends BaseCommand
     private function clearModels()
     {
         $dir = __DIR__.'/../../../../../';
-        $files = ['.php_cs.dist', 'phpcs.xml.dist'];
+        $files = ['.php_cs.dist', '.php-cs-fixer.dist.php', 'phpcs.xml.dist'];
 
         foreach ($files as $file) {
             $absolute = $dir.$file;

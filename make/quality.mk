@@ -3,8 +3,8 @@
 twc.stan: ./quality/phpstan.neon
 	vendor/bin/phpstan analyse -c ./quality/phpstan.neon --level=0 ./src
 
-twc.fixer: ./quality/.php_cs.dist
-	vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./quality/.php_cs.dist fix ./src
+twc.fixer: ./quality/.php-cs-fixer.dist.php
+	vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./quality/.php-cs-fixer.dist.php fix ./src
 
 twc.fix:
 	vendor/bin/phpcbf --standard=PSR12 ./src || true
