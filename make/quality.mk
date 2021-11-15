@@ -1,4 +1,4 @@
-.PHONY: twc.stan twc.fixer twc.fix twc.gitadd twc.fixdroits twc.test
+.PHONY: twc.stan twc.fixer twc.fix twc.rules twc.gitadd twc.fixdroits twc.test
 
 twc.stan: ./quality/phpstan.neon
 	vendor/bin/phpstan analyse -c ./quality/phpstan.neon --level=0 ./src

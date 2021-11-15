@@ -60,6 +60,7 @@ include vendor/twc/code-quality-plugin/make/quality.mk
 | make twc.stan | Lance une analyse statique avec ***phpstan***  | 
 | make twc.fixer | Fix les standards avec ***php-cs-fixer***  | 
 | make twc.fix | Fix les standards avec ***php-code-sniffer***  | 
+| make twc.rules | Retourne les erreurs suites au non respect des standards ***php-cs***  | 
 | make twc.test | Lancer les tests avec ***phpunit***  | 
 
 # Commandes
