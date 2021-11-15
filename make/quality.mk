@@ -20,4 +20,7 @@ twc.fixdroits:
 	chmod 777 .git/hooks/commit-msg
 	chmod 777 quality/commit-rules.sh
 
-twc.quality: twc.fixer twc.fix twc.gitadd twc.stan twc.test
+twc.rules:
+	vendor/bin/phpcs --standard=PSR12 ./src -n
+
+twc.quality: twc.fixer twc.fix twc.rules twc.gitadd twc.stan twc.test
