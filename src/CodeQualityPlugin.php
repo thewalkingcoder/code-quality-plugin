@@ -50,7 +50,7 @@ class CodeQualityPlugin implements PluginInterface, EventSubscriberInterface, Ca
     {
         $this->io->write('<info>twc/code-quality-plugin:</info> Installation');
 
-        $process = new Process('composer twc:install');
+        $process = new Process(['composer','twc:install']);
         $process->run();
 
         $this->io->write($process->getOutput());
