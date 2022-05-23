@@ -2,8 +2,8 @@
 
 namespace Twc\Plugin\Composer\Tests;
 
+use Composer\Console\Application;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 use Twc\Plugin\Composer\Command\MakefileInstall;
 
