@@ -1,7 +1,7 @@
 .PHONY: twc.stan twc.fixer twc.fix twc.rules twc.gitadd twc.fixdroits twc.test
 
 twc.stan: ./quality/phpstan.neon
-	vendor/bin/phpstan analyse -c ./quality/phpstan.neon --level=0 ./src
+	vendor/bin/phpstan analyse -c ./quality/phpstan.neon
 
 twc.fixer: ./quality/.php-cs-fixer.dist.php
 	vendor/friendsofphp/php-cs-fixer/php-cs-fixer --config=./quality/.php-cs-fixer.dist.php fix ./src
