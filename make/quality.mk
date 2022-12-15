@@ -13,7 +13,7 @@ twc.gitadd:
 	git add .
 	
 twc.test: phpunit.xml.dist
-	bin/phpunit
+	SYMFONY_DEPRECATIONS_HELPER=disabled bin/phpunit -c phpunit.xml.dist
 
 twc.fixdroits:
 	chmod 777 .git/hooks/pre-commit
